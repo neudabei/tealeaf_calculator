@@ -26,7 +26,6 @@ begin
     result = num1.to_i * num2.to_i
   elsif operator == '4'
     result = num1.to_f / num2.to_f
-  else "You have not entered a correct operator, please try again."
   end
 
   say("The result is #{result}")
@@ -34,4 +33,4 @@ begin
   # rerun the calculator?
   say("Do you want to calculate anything else?. Type 'Yes' or 'No' ")
   continue = gets.chomp
-end while continue == 'Yes'
+end while continue != 'No'
