@@ -18,14 +18,15 @@ begin
 
   operator = gets.chomp
    
+  result = 
   if operator == '1'
-     result = num1.to_i + num2.to_i
+     num1.to_i + num2.to_i
   elsif operator == '2'
-    result = num1.to_i - num2.to_i
+    num1.to_i - num2.to_i
   elsif operator == '3'
-    result = num1.to_i * num2.to_i
+    num1.to_i * num2.to_i
   elsif operator == '4'
-    result = num1.to_f / num2.to_f
+    num1.to_f / num2.to_f
   end
 
   say("The result is #{result}")
@@ -33,4 +34,4 @@ begin
   # rerun the calculator?
   say("Do you want to calculate anything else?. Type 'Yes' or 'No' ")
   continue = gets.chomp
-end while continue != 'No'
+end while continue.downcase == 'yes'
