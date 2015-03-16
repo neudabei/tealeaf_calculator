@@ -18,16 +18,21 @@ begin
 
   operator = gets.chomp
    
-  result = 
-  if operator == '1'
-     num1.to_i + num2.to_i
-  elsif operator == '2'
-    num1.to_i - num2.to_i
-  elsif operator == '3'
-    num1.to_i * num2.to_i
-  elsif operator == '4'
-    num1.to_f / num2.to_f
-  end
+  begin
+   
+    result = 
+    if operator == '1'
+       num1.to_i + num2.to_i
+    elsif operator == '2'
+      num1.to_i - num2.to_i
+    elsif operator == '3'
+      num1.to_i * num2.to_i
+    elsif operator == '4'
+      num1.to_f / num2.to_f
+    else puts "You have not entered 1, 2, 3 or 4. "
+    end
+
+end while operator != '1' || operator != '2' || operator != '3' || operator != '4'
 
   say("The result is #{result}")
 
